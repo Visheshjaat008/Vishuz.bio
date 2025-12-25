@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishesh Choudhary | Neon Space</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0a0f2c, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animated neon background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(120deg, #00f2ff, #9b00ff, #00ff9d);
+      opacity: 0.08;
+      animation: move 15s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes move {
+      0% { transform: translateX(-5%) translateY(-5%); }
+      100% { transform: translateX(5%) translateY(5%); }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 0 0 15px #00f2ff;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .card {
+      margin-top: 50px;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px rgba(0,255,255,0.15);
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .info div {
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0,0,0,0.4);
+      box-shadow: inset 0 0 15px rgba(0,255,255,0.15);
+    }
+
+    .info span {
+      display: block;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .info strong {
+      font-size: 1.1rem;
+      color: #00f2ff;
+    }
+
+    .links {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 40px;
+      color: #fff;
+      font-weight: 500;
+      background: linear-gradient(135deg, #00f2ff, #9b00ff);
+      box-shadow: 0 0 20px rgba(0,242,255,0.6);
+      transition: 0.3s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(155,0,255,0.9);
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    /* Music button */
+    .music-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00ff9d, #00f2ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(0,255,157,0.8);
+      font-size: 1.3rem;
+      color: #000;
+    }
+  </style></head>
+<body>  <!-- Background Music -->  <audio id="bgm" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f1c3b5b6c.mp3" type="audio/mpeg">
+  </audio>  <div class="container">
+    <h1>Vishesh Choudhary</h1>
+    <p class="subtitle">Digital Space • Neon Identity • Peaceful Chaos</p><div class="card">
+  <div class="info">
+    <div><span>Location</span><strong>Jaipur, Rajasthan</strong></div>
+    <div><span>Occupation</span><strong>Student</strong></div>
+    <div><span>Telegram</span><strong>@vishuIost</strong></div>
+    <div><span>Instagram</span><strong>@vishuz.exe</strong></div>
+    <div><span>WhatsApp</span><strong>+91 86901 20095</strong></div>
+  </div>
+
+  <div class="links">
+    <a href="https://t.me/vishuIost" target="_blank">Telegram Profile</a>
+    <a href="https://instagram.com/vishuz.exe" target="_blank">Instagram</a>
+    <a href="https://wa.me/918690120095" target="_blank">WhatsApp DM</a>
+    <a href="redirect-numbot.html" target="_blank">Username → Number Bot</a>
+    <a href="redirect-infobot.html" target="_blank">Telegram Info Bot</a>
+  </div>
+</div>
+
+<footer>
+  © 2025 Vishesh Choudhary • Neon Personal Website
+</footer>
+
+  </div>  <div class="music-btn" onclick="toggleMusic()">♪</div>  <script>
+    const music = document.getElementById('bgm');
+    let playing = false;
+
+    function toggleMusic() {
+      if (!playing) {
+        music.play();
+        playing = true;
+      } else {
+        music.pause();
+        playing = false;
+      }
+    }
+  </script></body>
+</html><!-- 
+IMPORTANT:
+Create two small redirect files so referral links are hidden:
+
+redirect-numbot.html  -> auto redirect to your numbot link
+redirect-infobot.html -> auto redirect to your info bot link
+-->
